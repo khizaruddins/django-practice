@@ -1,0 +1,46 @@
+{% extends '../base.html' %}
+
+{% block title %}
+  <title>
+    Form page
+  </title>
+{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1 class="display-1">
+        Welcome to Home page
+      </h1>
+      <p>
+        Please visit /formpage or use navigation or click <a href="{% url 'formpage' %}">here</a>
+      </p>
+      {% if form_data %}
+      <div class="table-responsive">
+        <table class="table table-bordered table-primary">
+          <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Text</th>
+          </tr>
+          {% for data in form_data %}
+            <tr>
+              <td>{{forloop.counter}}</td>
+              <td>{{data.name}}</td>
+              <td>{{data.email}}</td>
+              <td>{{data.text}}</td>
+            </tr>
+          {% endfor %}
+          </table>
+        </div>
+        {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    console.log('running block scripts from homepage');
+  </script>
+{% endblock %}

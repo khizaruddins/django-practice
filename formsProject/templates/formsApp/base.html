@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block title %}
+    {% endblock %}
+
+    {% include 'formsApp/partials/head.html' %}
+  </head>
+  <body>
+    <div class="main-content">
+      {% include 'formsApp/partials/nav.html' %}
+
+      {% block content %}
+      {% endblock %}
+    </div>
+    {% include 'formsApp/partials/footer.html' %}
+    {% include 'formsApp/partials/copyright.html' %}
+    {% include 'formsApp/partials/scripts.html' %}
+
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>

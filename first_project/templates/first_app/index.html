@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>django app leaves</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <h1>
+      hello here we have used some database values
+    </h1>
+    {% if access_records %}
+      <table>
+        <tr>
+          <th>
+            Sr. No.
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Date
+          </th>
+        </tr>
+      {% for acc in access_records %}
+        <tr>
+          <td>
+            {{ forloop.counter }}
+          </td>
+          <td>
+            {{ acc.name }}
+          </td>
+          <td>
+            {{ acc.date }}
+          </td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </body>
+</html>
