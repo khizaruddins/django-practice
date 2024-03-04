@@ -21,7 +21,7 @@ readme-renderer==24.0
 requests==2.22.0
 requests-toolbelt==0.9.1
 six==1.12.0
-sqlparse==0.3.0
+sqlparse==0.4.4
 text-unidecode==1.2
 tqdm==4.32.2
 twine==1.13.0
