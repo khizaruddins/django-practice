@@ -3,7 +3,7 @@ appnope==0.1.0
 bleach==3.1.0
 certifi==2022.12.7
 chardet==3.0.4
-Django==3.2.24
+Django==3.2.25
 docutils==0.14
 idna==2.8
 pkginfo==1.5.0.1
